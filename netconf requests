@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding=\"UTF-8\"?>
+<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+   <get-config>
+      <source>
+         <running/>
+      </source>
+   </get-config>
+</rpc>]]>]]>
+
+
+<?xml version="1.0" encoding=\"UTF-8\"?>
+<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> 
+   <get-config>
+      <source>
+         <running/>
+      </source>
+      <filter>
+         <config-format-text-block>
+            <text-filter-spec> | inc interface </text-filter-spec>
+         </config-format-text-block>
+      </filter>
+   </get-config>
+</rpc>]]>]]>
+
+
+
+<?xml version="1.0" encoding=\"UTF-8\"?>
+<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> 
+   <get-config>
+      <source>
+         <running/>
+      </source>
+      <filter>
+         <config-format-text-block>
+            <text-filter-spec> interface FastEthernet1/0 </text-filter-spec>
+         </config-format-text-block>
+      </filter>
+   </get-config>
+</rpc>]]>]]>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> 
+   <edit-config>
+      <target>
+         <running/>
+      </target>
+      <config>
+         <cli-config-data>
+<cmd>hostname Lab8Router</cmd>
+            <cmd>interface Loopback10</cmd>
+            <cmd>ip address 10.1.1.1 255.255.255.255</cmd>
+</cli-config-data>
+      </config>
+   </edit-config>
+</rpc>]]>]]>
+
+
+<?xml version="1.0" encoding=\"UTF-8\"?>
+<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> 
+   <get-config>
+      <source>
+         <running/>
+      </source>
+      <filter>
+         <config-format-text-block>
+            <text-filter-spec> interface Loopback10 </text-filter-spec>
+         </config-format-text-block>
+      </filter>
+   </get-config>
+</rpc>]]>]]>
+
+
+
+
+<?xml version="1.0" encoding=\"UTF-8\"?>
+<rpc message-id="101" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0"> 
+   <copy-config>
+      <target>
+         <startup/>
+      </target>
+      <source>
+         <running/>
+      </source>
+   </copy-config>
+</rpc>]]>]]>
